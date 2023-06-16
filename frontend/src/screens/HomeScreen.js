@@ -41,20 +41,26 @@ export default function HomeScreen() {
     <div>
       <h1>Featured products</h1>
       <div className="products">
-        {products.map((product) => (
-          <div className="product" key={product._id}>
-            <Link to={`/product/${product._id}`}>
-              <img src={product.image} alt={product.name}></img>
-            </Link>
-            <div className="product-info">
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          products.map((product) => (
+            <div className="product" key={product._id}>
               <Link to={`/product/${product._id}`}>
-                <p>{product.name}</p>
+                <img src={product.image} alt={product.name}></img>
               </Link>
-              <p>{product.price}</p>
-              <button>Add to cart</button>
+              <div className="product-info">
+                <Link to={`/product/${product._id}`}>
+                  <p>{product.name}</p>
+                </Link>
+                <p>{product.price}</p>
+                <button>Add to cart</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );
