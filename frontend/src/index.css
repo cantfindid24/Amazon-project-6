@@ -42,3 +42,7 @@ main {
 /* .rating :last-child {
   color: #404040;
 } */
+
+.img-large {
+  max-width: 100%;
+}
