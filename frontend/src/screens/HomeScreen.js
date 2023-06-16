@@ -18,20 +18,18 @@ const reducer = (state, action) => {
   }
 };
 
-export default function HomeScreen() {
+function HomeScreen() {
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
   });
 
-  // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/products'); //return object
-        // console.log(result); // object
+        const result = await axios.get('/api/products');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
@@ -60,3 +58,5 @@ export default function HomeScreen() {
     </div>
   );
 }
+
+export default HomeScreen;
