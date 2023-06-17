@@ -110,7 +110,7 @@ function ProductScreen(props) {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button variant="primary">Add to Cart</Button>
+                      <Button variant="dark">Add to Cart</Button>
                     </div>
                   </ListGroup.Item>
                 )}
