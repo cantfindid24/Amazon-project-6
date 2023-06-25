@@ -18,7 +18,7 @@ const CartScreen = () => {
   } = state;
 
   const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/product/${item._id}`);
+    const { data } = await axios.get(`/api/products/${item._id}`);
     if (data.countInStock < quantity) {
       window.alert('Sorry , Product is out of stock');
       return;
@@ -60,7 +60,7 @@ const CartScreen = () => {
                         alt={item.name}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{' '}
-                      <Link to={`/product/${item._id}`}>{item.name}</Link>
+                      <Link to={`/products/${item._id}`}>{item.name}</Link>
                     </Col>
                     <Col md={3}>
                       <Button

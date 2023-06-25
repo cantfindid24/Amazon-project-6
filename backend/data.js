@@ -1,8 +1,9 @@
 const data = {
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Nike Slim Shirt',
+      slug: 'nike-slim-shirt',
       category: 'Shirts',
       image: '/images/p1.jpg',
       price: 120,
@@ -13,8 +14,9 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Levis Denim',
+      slug: 'levis-denim',
       category: 'Pant',
       image: '/images/p2.jpg',
       price: 4800,
@@ -25,8 +27,9 @@ const data = {
       description: 'high stretch product',
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'lee brill Pant',
+      slug: 'lee-brill-pant',
       category: 'Pant',
       image: '/images/p3.jpg',
       price: 220,
@@ -37,8 +40,9 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Raymond Formal Shirt',
+      slug: 'raymond-formal-shirt',
       category: 'Shirts',
       image: '/images/p4.jpg',
       price: 3500,
@@ -49,8 +53,9 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
+      // _id: '5',
       name: 'Polo Round Shirt',
+      slug: 'polo-round-shirt',
       category: 'Shirts',
       image: '/images/p5.jpg',
       price: 700,
@@ -61,8 +66,9 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
+      // _id: '6',
       name: 'Adidas Jogger Pant',
+      slug: 'adidas-jogger-pant',
       category: 'pant',
       image: '/images/p6.jpg',
       price: 3900,
