@@ -17,7 +17,7 @@ const data = {
       name: 'Levis Denim',
       category: 'Pant',
       image: '/images/p2.jpg',
-      price: 4800,
+      price: 48,
       countInStock: 20,
       brand: 'levis',
       rating: 5,
