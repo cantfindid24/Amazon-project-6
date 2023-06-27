@@ -64,30 +64,32 @@ export default function ShippingAddressScreen() {
               onChange={(e) => setFullName(e.target.value)}
               required
             />
-            <Form.Group className="mb-3" controlId="address">
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="city">
-              <Form.Label>City</Form.Label>
-              <Form.Control
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="postalCode">
-              <Form.Label>Postal Code</Form.Label>
-              <Form.Control
-                value={postalCode}
-                onChange={(e) => setPostalCode(e.target.value)}
-                required
-              />
-            </Form.Group>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>Address</Form.Label>
+            <Form.Control
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="city">
+            <Form.Label>City</Form.Label>
+            <Form.Control
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="postalCode">
+            <Form.Label>Postal Code</Form.Label>
+            <Form.Control
+              value={postalCode}
+              onChange={(e) => setPostalCode(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group>
             <Form.Label>Country</Form.Label>
             <Form.Control
               value={country}
