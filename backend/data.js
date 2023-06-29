@@ -84,7 +84,7 @@ const data = {
       // _id: '6',
       name: 'Adidas Jogger Pant',
       slug: 'adidas-jogger-pant',
-      category: 'pant',
+      category: 'Pant',
       image: '/images/p6.jpg',
       price: 15,
       countInStock: 2,

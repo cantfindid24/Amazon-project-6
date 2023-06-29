@@ -63,7 +63,7 @@ const data = {
     {
       _id: '6',
       name: 'Adidas Jogger Pant',
-      category: 'pant',
+      category: 'Pant',
       image: '/images/p6.jpg',
       price: 3900,
       countInStock: 0,
