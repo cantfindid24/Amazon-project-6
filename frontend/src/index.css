@@ -16,7 +16,8 @@ a {
 main {
   flex: 1;
 }
-.btn-primary {
+.btn-primary,
+.btn-outline-primary {
   background-color: #f0c040;
 }
 .products {
