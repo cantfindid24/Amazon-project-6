@@ -24,6 +24,7 @@ import Button from 'react-bootstrap/esm/Button';
 import { getError } from './utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
+import SearchScreen from './screens/SearchScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -126,7 +127,11 @@ function App() {
             {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
-                  to={`/search/category=${category}`}
+                  to={{
+                    pathname: '/search',
+                    search: `?category=${category}`,
+                  }}
+                  // to={`/search/category=${category}`}
                   onClick={() => setSidebarisopen(false)}
                 >
                   <Nav.Link>{category}</Nav.Link>
@@ -140,6 +145,7 @@ function App() {
             <Routes>
               <Route path="/product/:_id" element={<ProductScreen />}></Route>
               <Route path="/cart" element={<CartScreen />} />
+              <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/profile" element={<ProfileScreen />} />
@@ -162,3 +168,15 @@ function App() {
 }
 
 export default App;
+
+// http://localhost:3000/search/category=all&query=all&price=all&rating=all&order=newest&page=1
+
+// const successCallback = (position) => {
+//   console.log(position);
+// };
+
+// const errorCallback = (error) => {
+//   console.log(error);
+// };
+
+// navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
