@@ -25,6 +25,7 @@ import { getError } from './utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
+import logo from './screens/logo1.png';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -61,25 +62,42 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar
+            bg="dark"
+            variant="dark"
+            expand="lg"
+            className="navbar"
+            style={{ opacity: '1', zIndex: '2500' }}
+          >
             <Container>
               <Button
+                className="me-2"
                 variant="dark"
                 onClick={() => {
                   setSidebarisopen(!sidebarisopen);
                 }}
               >
-                <i className="fas fa-bars"></i>
+                {' '}
+                <i className="fas fa-bars"></i>{' '}
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                {/* <Navbar.Brand>amazon</Navbar.Brand> */}
+                <Navbar.Brand>
+                  <div className="amazon-logo">
+                    <img src={logo} alt="amazon" />
+                    <span>.in</span>
+                  </div>
+                </Navbar.Brand>
               </LinkContainer>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                className="border-0"
+              />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto w-100 justify-content-end">
                   <Link to="/cart" className="nav-link">
-                    Cart
+                    <i className="fa fa-shopping-cart text-white"></i>
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
                         {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
@@ -108,6 +126,22 @@ function App() {
                       Sign In
                     </Link>
                   )}
+                  {/* {userInfo && userInfo.isAdmin && (
+                    <NavDropdown title="Admin" id="admin-nav-dropdown">
+                      <LinkContainer to="/admin/dashboard">
+                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/products">
+                        <NavDropdown.Item>Products</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/orders">
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/users">
+                        <NavDropdown.Item>Users</NavDropdown.Item>
+                      </LinkContainer>
+                    </NavDropdown>
+                  )} */}
                 </Nav>
               </Navbar.Collapse>
             </Container>

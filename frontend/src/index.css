@@ -59,7 +59,25 @@ main {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
 }
+.navbar {
+  padding: 2px 0;
+  box-shadow: 0, 0, 10px rgb(70, 69, 69);
+}
+.amazon-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amazon-logo img {
+  width: 103px;
+  height: 31px;
+  margin-top: 15px;
+}
 
+.amazon-logo span {
+  margin-top: 10px;
+  font-size: 14px;
+}
 .navbar-brand {
   font-weight: bold;
 }
