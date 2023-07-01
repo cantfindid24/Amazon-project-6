@@ -210,17 +210,70 @@ function App() {
         <main>
           <Container className="mt-3">
             <Routes>
+              {/* -------admin------- */}
+
+              {/* <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminRoute>
+                    <DashboardScreen />
+                  </AdminRoute>
+                }
+              />
+
+              <Route
+                path="/admin/products"
+                element={
+                  <AdminRoute>
+                    <ProductListScreen />
+                  </AdminRoute>
+                }
+              />
+
+              <Route
+                path="/admin/orders"
+                element={
+                  <AdminRoute>
+                    <OrderListScreen />
+                  </AdminRoute>
+                }
+              />
+
+              <Route
+                path="/admin/product/:id"
+                element={
+                  <AdminRoute>
+                    <ProductEditScreen />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path="/admin/user/:id"
+                element={
+                  <AdminRoute>
+                    <UserEditScreen />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <UserListScreen />
+                  </AdminRoute>
+                }
+              /> */}
+
+              {/* -------admin------- */}
+
               <Route path="/product/:_id" element={<ProductScreen />}></Route>
+              <Route path="/orders/:id" element={<OrderScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/profile" element={<ProfileScreen />} />
-              <Route path="/orders/:id" element={<OrderScreen />}></Route>
-              <Route
-                path="/orderhistory"
-                element={<OrderHistoryScreen />}
-              ></Route>
+              <Route path="/orderhistory" element={<OrderHistoryScreen />} />
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
@@ -228,6 +281,7 @@ function App() {
             </Routes>
           </Container>
         </main>
+        {/* <Footer /> */}
         <footer className="text-center">All rights reserved</footer>
       </div>
     </BrowserRouter>
@@ -237,13 +291,3 @@ function App() {
 export default App;
 
 // http://localhost:3000/search/category=all&query=all&price=all&rating=all&order=newest&page=1
-
-// const successCallback = (position) => {
-//   console.log(position);
-// };
-
-// const errorCallback = (error) => {
-//   console.log(error);
-// };
-
-// navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
