@@ -1,4 +1,11 @@
-import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Link,
+  Navigate,
+  Route,
+  redirect,
+  Routes,
+} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
@@ -61,6 +68,9 @@ function App() {
         }
       >
         <ToastContainer position="bottom-center" limit={1} />
+
+        {/* -------Navbar------- */}
+
         <header>
           <Navbar
             bg="dark"
@@ -154,7 +164,27 @@ function App() {
               : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
           }
         >
-          <Nav className="flex-column text-white w-100 p-2">
+          {/* -------Sidebar------- */}
+
+          <Nav className="flex-column text-white w-100 my-2">
+            <p className=" text-white ms-3 ">
+              Hello,&nbsp;
+              <b>
+                {userInfo ? (
+                  userInfo.name
+                ) : (
+                  <Link className="ms-2" to={`/signin?redirect=${redirect}`}>
+                    User
+                  </Link>
+                )}
+              </b>{' '}
+              <button
+                onClick={() => setSidebarisopen(false)}
+                className="btn closeBtn text-white "
+              >
+                <i className="fas fa-times "></i>
+              </button>
+            </p>
             <Nav.Item>
               <strong>Categories</strong>
             </Nav.Item>
@@ -174,6 +204,9 @@ function App() {
             ))}
           </Nav>
         </div>
+
+        {/* -------Main------- */}
+
         <main>
           <Container className="mt-3">
             <Routes>

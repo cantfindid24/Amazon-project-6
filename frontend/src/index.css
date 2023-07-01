@@ -59,6 +59,8 @@ main {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
 }
+
+/* -------Navbar------- */
 .navbar {
   padding: 2px 0;
   box-shadow: 0, 0, 10px rgb(70, 69, 69);
@@ -81,14 +83,21 @@ main {
 .navbar-brand {
   font-weight: bold;
 }
+
+/* Sidebar  */
+.closeBtn {
+  margin-left: 8px;
+}
 .side-navbar {
   width: 240px;
+  /* width: 170px; */
   height: 100%;
   position: absolute;
   left: -300px;
   background-color: #100901;
   transition: 0.5s;
 }
+
 .site-container {
   transition: 0.4s;
 }
