@@ -33,6 +33,7 @@ import axios from 'axios';
 import SearchBox from './components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
 import logo from './screens/logo1.png';
+import Footer from './components/Footer';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -167,8 +168,9 @@ function App() {
           {/* -------Sidebar------- */}
 
           <Nav className="flex-column text-white w-100 my-2">
-            <p className=" text-white ms-3 ">
-              Hello,&nbsp;
+            <p className=" text-white ms-1 ">
+              <i className="fa fa-user text-white"></i>
+              {/* Hello,&nbsp; */}
               <b>
                 {userInfo ? (
                   userInfo.name
@@ -281,8 +283,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        {/* <Footer /> */}
-        <footer className="text-center">All rights reserved</footer>
+        <Footer />
       </div>
     </BrowserRouter>
   );
