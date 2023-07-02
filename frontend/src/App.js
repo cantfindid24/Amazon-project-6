@@ -1,11 +1,4 @@
-import {
-  BrowserRouter,
-  Link,
-  Navigate,
-  Route,
-  redirect,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter, Link, Route, redirect, Routes } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
@@ -35,6 +28,8 @@ import SearchScreen from './screens/SearchScreen';
 import logo from './screens/logo1.png';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminRoute from './components/AdminRoute';
+import DashboardScreen from './screens/DashboardScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -138,22 +133,22 @@ function App() {
                       Sign In
                     </Link>
                   )}
-                  {/* {userInfo && userInfo.isAdmin && (
+                  {userInfo && userInfo.isAdmin && (
                     <NavDropdown title="Admin" id="admin-nav-dropdown">
                       <LinkContainer to="/admin/dashboard">
                         <NavDropdown.Item>Dashboard</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/products">
+                      <LinkContainer to="/admin/productlist">
                         <NavDropdown.Item>Products</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/orders">
+                      <LinkContainer to="/admin/orderlist">
                         <NavDropdown.Item>Orders</NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/admin/users">
+                      <LinkContainer to="/admin/userlist">
                         <NavDropdown.Item>Users</NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
-                  )} */}
+                  )}
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -215,7 +210,7 @@ function App() {
             <Routes>
               {/* -------Admin Routes------- */}
 
-              {/* <Route
+              <Route
                 path="/admin/dashboard"
                 element={
                   <AdminRoute>
@@ -224,8 +219,8 @@ function App() {
                 }
               />
 
-              <Route
-                path="/admin/products"
+              {/* <Route
+                path="/admin/productlist"
                 element={
                   <AdminRoute>
                     <ProductListScreen />
@@ -234,7 +229,7 @@ function App() {
               />
 
               <Route
-                path="/admin/orders"
+                path="/admin/orderlist"
                 element={
                   <AdminRoute>
                     <OrderListScreen />
@@ -259,7 +254,7 @@ function App() {
                 }
               />
               <Route
-                path="/admin/users"
+                path="/admin/userlist"
                 element={
                   <AdminRoute>
                     <UserListScreen />
