@@ -31,11 +31,7 @@ main {
   flex-wrap: wrap;
 }
 .product {
-  border: 1px #404040 solid;
-  margin: 1rem;
-}
-.products > .product {
-  border: 1px solid #404040;
+  border: 0.1px #dcd4d4 solid;
   margin: 1rem;
 }
 .product {
