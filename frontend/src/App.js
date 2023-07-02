@@ -34,6 +34,7 @@ import SearchBox from './components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
 import logo from './screens/logo1.png';
 import Footer from './components/Footer';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -212,7 +213,7 @@ function App() {
         <main>
           <Container className="mt-3">
             <Routes>
-              {/* -------admin------- */}
+              {/* -------Admin Routes------- */}
 
               {/* <Route
                 path="/admin/dashboard"
@@ -269,13 +270,34 @@ function App() {
               {/* -------admin------- */}
 
               <Route path="/product/:_id" element={<ProductScreen />}></Route>
-              <Route path="/orders/:id" element={<OrderScreen />} />
+              <Route
+                path="/orders/:id"
+                element={
+                  <ProtectedRoute>
+                    <OrderScreen />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/profile" element={<ProfileScreen />} />
-              <Route path="/orderhistory" element={<OrderHistoryScreen />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <ProfileScreen />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/orderhistory"
+                element={
+                  <ProtectedRoute>
+                    <OrderHistoryScreen />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
