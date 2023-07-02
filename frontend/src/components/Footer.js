@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import logo from '../screens/logo1.png';
+import logo from '../image-folder/logo/logo1.png';
 // import '../../src/footer.css';
 import { LinkContainer } from 'react-router-bootstrap';
 import axios from 'axios';

@@ -7,6 +7,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Banner from '../components/Banner';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -45,6 +46,7 @@ function HomeScreen() {
       <Helmet>
         <title>Amazona</title>
       </Helmet>
+      <Banner />
       <h1>Featured products</h1>
       <div className="products">
         {loading ? (
