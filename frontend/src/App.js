@@ -165,7 +165,7 @@ function App() {
 
           <Nav className="flex-column text-white w-100 my-2">
             <p className=" text-white ms-1 ">
-              <i className="fa fa-user text-white"></i>
+              <i className="fa fa-user text-white px-3"></i>
               {/* Hello,&nbsp; */}
               <b>
                 {userInfo ? (
