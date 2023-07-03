@@ -14,11 +14,7 @@ export default function SearchBox() {
     e.target.reset();
   };
   return (
-    <Form
-      style={{ width: '100%' }}
-      className="d-flex me-auto"
-      onSubmit={submitHandler}
-    >
+    <Form className="d-flex me-auto w-100" onSubmit={submitHandler}>
       <InputGroup>
         <FormControl
           type="text"

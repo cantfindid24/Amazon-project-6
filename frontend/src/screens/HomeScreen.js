@@ -44,10 +44,10 @@ function HomeScreen() {
   return (
     <div>
       <Helmet>
-        <title>Amazona</title>
+        <title>Amazon</title>
       </Helmet>
       <Banner />
-      <div className="mx-5  mt-3">
+      <div className="mx-5 mt-3">
         <h1>Featured products</h1>
         <div className="products">
           {loading ? (

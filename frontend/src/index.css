@@ -61,7 +61,7 @@ main {
   height: 80px;
 }
 .small-container {
-  max-width: 600px;
+  max-width: 200px;
 }
 
 /* --------------Checkout-Steps--------------- */
@@ -90,7 +90,6 @@ main {
   height: 31px;
   margin-top: 15px;
 }
-
 .amazon-logo span {
   margin-top: 10px;
   font-size: 14px;
@@ -98,7 +97,10 @@ main {
 .navbar-brand {
   font-weight: bold;
 }
-
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  width: 50px;
+  left: -3rem;
+}
 /* --------------Sidebar----------------- */
 .closeBtn {
   margin-left: 8px;
