@@ -39,7 +39,7 @@ orderRouter.get(
   expressAsyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id);
     if (order) {
-      console.log(order);
+      // console.log(order);
       res.send(order);
     } else {
       res.status(404).send({ message: 'Order Not Found' });

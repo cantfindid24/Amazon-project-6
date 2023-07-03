@@ -30,7 +30,7 @@ const reducer = (state, action) => {
 function ProductScreen(props) {
   const navigate = useNavigate();
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   const { _id } = params;
 
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
