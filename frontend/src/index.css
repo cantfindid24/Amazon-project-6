@@ -277,13 +277,15 @@ main {
 .footer .navFooterBackToTop {
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-color: #252e36;
 }
 
 .footer {
+  margin-top: 5rem;
   background-color: #040714 !important;
   color: white;
+  font-size: small;
 }
 
 section {
